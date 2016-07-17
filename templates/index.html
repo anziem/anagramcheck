@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block body %}
+{% include 'flash.html' %}
+<div class="container">
+    <h1>Anagram Check</h1>
+    <p>Enter two words or phrases and find out if they're anagrams.</p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="well">
+                <form class="form" action="" method="post">
+                    <input name=_csrf_token type=hidden value="{{ csrf_token() }}">
+                    <div class="form-group">
+                        <label for="firststring">First phrase</label>
+                        <input type="text" class="form-control" name="firststring">
+                    </div>
+                    <div class="form-group">
+                        <label for="secondstring">Second phrase</label>
+                        <input type="text" class="form-control" name="secondstring">
+                    </div>
+                    <div class="control-group">
+                        <label class="checkbox">
+                            <input type="checkbox" name="ignore_formatting">Ignore formatting, punctuation, and spaces
+                        </label>
+                    </div>
+                   <div>
+                        <input class="btn btn-primary" type="submit" value="Check">
+                  </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

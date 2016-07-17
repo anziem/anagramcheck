@@ -1,0 +1,23 @@
+application: anagramcheck-1334
+runtime: python27
+version: 3
+api_version: 1
+threadsafe: yes
+default_expiration: "1d"
+
+handlers:
+- url: /static
+  static_dir: static
+
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: jinja2
+  version: latest
+- name: markupsafe
+  version: latest
