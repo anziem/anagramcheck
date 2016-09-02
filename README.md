@@ -1,6 +1,6 @@
 # Anagram Check
 
-Simple responsive GAE app to check whether two phrases are anagrams of each other.
+Responsive GAE app to check whether two phrases are anagrams of each other. Can be viewed at http://anagramcheck-1334.appspot.com/
 
 ## Requirements
 - [Google App Engine SDK for Python][]
